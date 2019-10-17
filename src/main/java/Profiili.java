@@ -2,7 +2,6 @@
 public class Profiili {
 	private String status;
 	private int ika;
-	
 
 	public Profiili(String status, int ika) {
 		this.status = status;

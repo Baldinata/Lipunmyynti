@@ -19,17 +19,20 @@ public class PaasylippuTest {
 		LocalDateTime pvmEnd = pvmnow.plusDays(1);
 		lippuEraantyypvm = pvmEnd.format(DateTimeFormatter.ofPattern("dd-MM-yyyy 'Kello: ' HH:mm:ss"));
 	}
+
 	@Test
 	public void lippuOstettupvmTest() {
 		paasylippu.getLippuOstettupvm();
 		assertEquals(lippuOstettupvm, paasylippu.getLippuOstettupvm());
 
 	}
+
 	@Test
 	public void lippuEraantyyTest() {
 		paasylippu.getLippuEraantyypvm();
 		assertEquals(lippuEraantyypvm, paasylippu.getLippuEraantyypvm());
 	}
+
 	@Test
 	public void getNimiTest() {
 		paasylippu.getNimi();

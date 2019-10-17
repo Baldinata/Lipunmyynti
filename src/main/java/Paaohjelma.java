@@ -40,7 +40,5 @@ public class Paaohjelma {
 		lippu.lisaaMappiin(marika, naytelma);
 
 		System.out.println(lippu);
-		System.out.println(elokuvat.getLippuEraantyypvm());
-
 	}
 }

@@ -18,10 +18,11 @@ public class LipunmyyntiTest {
 
 	@Test
 	public void laskeHintaTest() {
-		 lipunmyynti.laskeHinta(mikko, elokuvat);
-		assertEquals(13.5, lipunmyynti.laskeHinta(mikko, elokuvat) ,0.00001);
-		
+		lipunmyynti.laskeHinta(mikko, elokuvat);
+		assertEquals(13.5, lipunmyynti.laskeHinta(mikko, elokuvat), 0.00001);
+
 	}
+
 	@Test
 	public void alkuperaineHintaTest() {
 		lipunmyynti.alkuperainenHintaYhteensa(elokuvat);

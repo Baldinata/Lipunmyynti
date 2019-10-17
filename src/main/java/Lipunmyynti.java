@@ -16,6 +16,10 @@ public class Lipunmyynti {
 		myydytLiput.put(profiili, paasyLippu);
 	}
 
+	public int myytyjaLippuja() {
+		return myydytLiput.size();
+	}
+
 	public double alkuperainenHintaYhteensa(Paasylippu paasylippu) {
 		double hinta = paasylippu.getHinta();
 		return hinta;
@@ -56,8 +60,7 @@ public class Lipunmyynti {
 		System.out.print("\n\t" + UnicodeMerkit.SORMI_MERKKI + " " + "Todellinen arvo yhteensa" + " "
 				+ UnicodeMerkit.PYORISTYS_MERKKI + " " + (this.EiAlennettuHintaYhteensa));
 		System.out.print("\n\t" + UnicodeMerkit.SORMI_MERKKI + " " + "Alennuksien arvo yhteensa "
-				+ UnicodeMerkit.PYORISTYS_MERKKI + " " + (this.myyneetYhteensa - this.EiAlennettuHintaYhteensa) + " "
-				+ UnicodeMerkit.PYORISTYS_MERKKI);
+				+ UnicodeMerkit.PYORISTYS_MERKKI + " " + (this.myyneetYhteensa - this.EiAlennettuHintaYhteensa));
 		System.out.print("\n\t" + UnicodeMerkit.SORMI_MERKKI + " " + "Alennuksen jalkeen lippujen arvo "
 				+ UnicodeMerkit.PYORISTYS_MERKKI + " " + this.myyneetYhteensa);
 		System.out.print(

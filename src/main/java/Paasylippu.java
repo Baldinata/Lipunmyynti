@@ -8,6 +8,10 @@ public class Paasylippu {
 	private double hinta;
 	private String lippuOstettupvm;
 	private String lippuEraantyypvm;
+	
+	public Paasylippu() {
+		
+	}
 
 	public Paasylippu(String nimi, double hinta) {
 		this.nimi = nimi;
