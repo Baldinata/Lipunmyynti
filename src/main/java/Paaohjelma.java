@@ -38,7 +38,6 @@ public class Paaohjelma {
 		lippu.lisaaMappiin(heidi, naytelma);
 		lippu.lisaaMappiin(katri, naytelma);
 		lippu.lisaaMappiin(marika, naytelma);
-
-		System.out.println(lippu);
+		lippu.tulostaYksittainenLippu(marika);
 	}
 }

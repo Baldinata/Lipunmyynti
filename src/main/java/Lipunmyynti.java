@@ -1,3 +1,4 @@
+
 import java.math.BigDecimal;
 import java.util.HashMap;
 import java.util.Map;
@@ -12,12 +13,23 @@ public class Lipunmyynti {
 		this.myydytLiput = new HashMap<>();
 	}
 
-	public void lisaaMappiin(Profiili profiili, Paasylippu paasyLippu) {
-		myydytLiput.put(profiili, paasyLippu);
-	}
-
 	public int myytyjaLippuja() {
 		return myydytLiput.size();
+	}
+
+	public Paasylippu yksittainenPaasyLippu(Profiili profiili) {
+		return this.myydytLiput.get(profiili);
+	}
+
+	public void tulostaYksittainenLippu(Profiili profiili) {
+		System.out.println("\t*************\n\tPaasylippu \n" + "\tStatus = " + profiili.getStatus()
+				+ "\n\tAlennus prosentti =" + " " + profiili.getAlennusProsentti() + "\n\tHinta "
+				+ laskeHintaPyoristetty(profiili, myydytLiput.get(profiili)) + " " + yksittainenPaasyLippu(profiili)
+				+ "\n");
+	}
+
+	public void lisaaMappiin(Profiili profiili, Paasylippu paasyLippu) {
+		myydytLiput.put(profiili, paasyLippu);
 	}
 
 	public double alkuperainenHintaYhteensa(Paasylippu paasylippu) {
@@ -42,7 +54,7 @@ public class Lipunmyynti {
 
 	}
 
-	private void myydytLiput() {
+	public void tulostaaKaikkiMyydytLiputJaTiedot() {
 		System.out.println("\tLista myydyista lipuista \n");
 
 		myydytLiput.entrySet().forEach(x -> {
@@ -70,7 +82,7 @@ public class Lipunmyynti {
 
 	@Override
 	public String toString() {
-		myydytLiput();
-		return "";
+		return "Lipunmyynti [myydytLiput=" + myydytLiput + ", myyneetYhteensa=" + myyneetYhteensa + ", indeksi="
+				+ indeksi + ", EiAlennettuHintaYhteensa=" + EiAlennettuHintaYhteensa + "]";
 	}
 }
